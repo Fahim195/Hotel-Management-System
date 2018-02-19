@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39384AD0-AA9B-45A2-8892-0B561D119F8E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hotel_Management_System_Final_</RootNamespace>
+    <AssemblyName>Hotel_Management_System%28Final%29</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Restore_or_BackupBLL.cs" />
+    <Compile Include="BLL\SignInBLL.cs" />
+    <Compile Include="BLL\SystemAccessBLL.cs" />
+    <Compile Include="DAL\DAO\SystemAccess.cs" />
+    <Compile Include="DAL\Restore_or_BackupDAL.cs" />
+    <Compile Include="DAL\SignInDAL.cs" />
+    <Compile Include="DAL\SystemAccessDAL.cs" />
+    <Compile Include="Report\Current_Month_Record_CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Current_Month_Record_CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Dataset\All_Rooms_Details_DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>All_Rooms_Details_DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\All_Room_DetailsCrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>All_Room_DetailsCrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BLL\CheckInBLL.cs" />
+    <Compile Include="BLL\CheckoutBLL.cs" />
+    <Compile Include="BLL\PaymentBLL.cs" />
+    <Compile Include="BLL\ReportingBLL.cs" />
+    <Compile Include="BLL\ReservationBLL.cs" />
+    <Compile Include="BLL\RoomBLL.cs" />
+    <Compile Include="BLL\SearchBLL.cs" />
+    <Compile Include="Report\Current_Week_Reocrd_CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Current_Week_Reocrd_CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerBilling_SlipCrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerBilling_SlipCrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Dataset\CustomerBilling_SlipDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerBilling_SlipDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Dataset\Customer_Details_DataSet1.cs">
+      <DependentUpon>Customer_Details_DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Dataset\Customer_Details_DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_Details_DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Customer_Detaisls_CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer_Detaisls_CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\CheckInDAL.cs" />
+    <Compile Include="DAL\CheckOutDAL.cs" />
+    <Compile Include="DAL\DAO\Cost.cs" />
+    <Compile Include="DAL\DAO\Customer.cs" />
+    <Compile Include="DAL\DAO\DBconnection.cs" />
+    <Compile Include="DAL\DAO\Record.cs" />
+    <Compile Include="DAL\DAO\Room.cs" />
+    <Compile Include="BLL\RecordBLL.cs" />
+    <Compile Include="DAL\PaymentDAL.cs" />
+    <Compile Include="DAL\RecordDAL.cs" />
+    <Compile Include="DAL\ReportingDAL.cs" />
+    <Compile Include="DAL\ReservationDAL.cs" />
+    <Compile Include="DAL\RoomDAL.cs" />
+    <Compile Include="DAL\SearchDAL.cs" />
+    <Compile Include="Report\Last_15_Days_Report_CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Last_15_Days_Report_CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIL\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIL\Frontend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\Frontend.Designer.cs">
+      <DependentUpon>Frontend.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\All_Room_DetailsCrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>All_Room_DetailsCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Current_Month_Record_CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Current_Month_Record_CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Current_Week_Reocrd_CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Current_Week_Reocrd_CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerBilling_SlipCrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerBilling_SlipCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Customer_Detaisls_CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Customer_Detaisls_CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Last_15_Days_Report_CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Last_15_Days_Report_CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UIL\Frontend.resx">
+      <DependentUpon>Frontend.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Report\Dataset\All_Rooms_Details_DataSet1.xsc">
+      <DependentUpon>All_Rooms_Details_DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Dataset\All_Rooms_Details_DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>All_Rooms_Details_DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Dataset\All_Rooms_Details_DataSet1.xss">
+      <DependentUpon>All_Rooms_Details_DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Dataset\CustomerBilling_SlipDataSet1.xsc">
+      <DependentUpon>CustomerBilling_SlipDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Dataset\CustomerBilling_SlipDataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerBilling_SlipDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Dataset\CustomerBilling_SlipDataSet1.xss">
+      <DependentUpon>CustomerBilling_SlipDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Dataset\Customer_Details_DataSet1.xsc">
+      <DependentUpon>Customer_Details_DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Dataset\Customer_Details_DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Customer_Details_DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Dataset\Customer_Details_DataSet1.xss">
+      <DependentUpon>Customer_Details_DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-circle-filled-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-close-or-delete-circular-interface-button-symbol_318-70281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\070650-glossy-black-3d-button-icon-alphanumeric-x-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17240066_10212108911826167_133503650343650326_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
